@@ -5,13 +5,8 @@ from django.contrib.sites.models import Site
 
 class Command(BaseCommand):
 
-    """Command that populates db for testing purposes."""
-
-    help = "Load data into the database"
-
     def handle(self, *args, **options):
-        site = Site.objects.get()
+        site = Site.objects.get_current()
         site.name = "ngrok url"
-        site.domain = "4f1fa68a.ngrok.com"
+        site.domain = "django_payzen.ngrok.com"
         site.save()
- 
