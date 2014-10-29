@@ -8,5 +8,5 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         site = Site.objects.get_current()
         site.name = "ngrok url"
-        site.domain = "django_payzen.ngrok.com"
+        site.domain = "django-payzen.ngrok.com"
         site.save()
